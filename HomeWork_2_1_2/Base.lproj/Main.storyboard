@@ -36,7 +36,7 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sUZ-1e-Jpy">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="114.66666666666667"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YSP-rl-vJc">
                                         <rect key="frame" x="0.0" y="179.66666666666666" width="116" height="114.66666666666666"/>
@@ -44,13 +44,13 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eO-PU-afv">
                                         <rect key="frame" x="0.0" y="359.33333333333331" width="116" height="114.66666666666669"/>
-                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="e8W-12-6ht" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.280374" id="IzY-Rx-mZ3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="loz-89-opB" secondAttribute="bottom" constant="45" id="Lbf-wv-jMc"/>
@@ -61,8 +61,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenView" destination="sUZ-1e-Jpy" id="gkR-1x-bdz"/>
-                        <outlet property="redView" destination="5eO-PU-afv" id="qk6-OS-ASP"/>
+                        <outlet property="greenView" destination="5eO-PU-afv" id="qk6-OS-ASP"/>
+                        <outlet property="redView" destination="sUZ-1e-Jpy" id="gkR-1x-bdz"/>
                         <outlet property="startButton" destination="loz-89-opB" id="Th2-Ai-tex"/>
                         <outlet property="yellowView" destination="YSP-rl-vJc" id="bfT-U5-Dkm"/>
                     </connections>
@@ -79,8 +79,8 @@
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

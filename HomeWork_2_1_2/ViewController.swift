@@ -15,9 +15,9 @@ enum Colour {
 
 class ViewController: UIViewController {
 
-    @IBOutlet var greenView: UIView!
-    @IBOutlet var yellowView: UIView!
     @IBOutlet var redView: UIView!
+    @IBOutlet var yellowView: UIView!
+    @IBOutlet var greenView: UIView!
     @IBOutlet var startButton: UIButton!
     
     private var signColour = ""
@@ -25,9 +25,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startButton.layer.cornerRadius = 10
-        greenView.alpha = 0.3
-        yellowView.alpha = 0.3
+        redView.layer.cornerRadius = 42
+        redView.layer.masksToBounds = false
+        yellowView.layer.cornerRadius = 42
+        yellowView.layer.masksToBounds = false
+        greenView.layer.cornerRadius = 42
+        greenView.layer.masksToBounds = false
         redView.alpha = 0.3
+        yellowView.alpha = 0.3
+        greenView.alpha = 0.3
         signColour = "green"
     }
 
@@ -41,20 +47,20 @@ class ViewController: UIViewController {
         
         switch signColour {
         case "green":
-            greenView.alpha = 1
+            redView.alpha = 1
             yellowView.alpha = 0.3
-            redView.alpha = 0.3
+            greenView.alpha = 0.3
             signColour = "yellow"
             secondStart = true
         case "yellow":
-            greenView.alpha = 0.3
-            yellowView.alpha = 1
             redView.alpha = 0.3
+            yellowView.alpha = 1
+            greenView.alpha = 0.3
             signColour = "red"
         case "red":
-            greenView.alpha = 0.3
+            redView.alpha = 0.3
             yellowView.alpha = 0.3
-            redView.alpha = 1
+            greenView.alpha = 1
             signColour = "green"
         default:
             break
