@@ -7,10 +7,10 @@
 
 import UIKit
 
-enum Colour {
-    case green
-    case yellow
+enum Colours {
     case red
+    case yellow
+    case green
 }
 
 class ViewController: UIViewController {
@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet var greenView: UIView!
     @IBOutlet var startButton: UIButton!
     
-    private var signColour = ""
+    private var signColour = Colours.red
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         redView.alpha = 0.3
         yellowView.alpha = 0.3
         greenView.alpha = 0.3
-        signColour = "green"
     }
 
     @IBAction func startPressed(_ sender: UIButton) {
@@ -46,25 +45,27 @@ class ViewController: UIViewController {
         }
         
         switch signColour {
-        case "green":
+        case .red:
             redView.alpha = 1
             yellowView.alpha = 0.3
             greenView.alpha = 0.3
-            signColour = "yellow"
+            signColour = .yellow
             secondStart = true
-        case "yellow":
+
+        case .yellow:
             redView.alpha = 0.3
             yellowView.alpha = 1
             greenView.alpha = 0.3
-            signColour = "red"
-        case "red":
+            signColour = .green
+
+        case .green:
             redView.alpha = 0.3
             yellowView.alpha = 0.3
             greenView.alpha = 1
-            signColour = "green"
-        default:
-            break
+            signColour = .red
+    
         }
+                
     }
 }
 
