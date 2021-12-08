@@ -27,6 +27,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="startPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zxW-wp-2Nj"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="e8W-12-6ht">
                                 <rect key="frame" x="149" y="44" width="116" height="474"/>
@@ -57,6 +60,12 @@
                             <constraint firstItem="e8W-12-6ht" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rvD-0d-rSw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="sUZ-1e-Jpy" id="gkR-1x-bdz"/>
+                        <outlet property="redView" destination="5eO-PU-afv" id="qk6-OS-ASP"/>
+                        <outlet property="startButton" destination="loz-89-opB" id="Th2-Ai-tex"/>
+                        <outlet property="yellowView" destination="YSP-rl-vJc" id="bfT-U5-Dkm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
